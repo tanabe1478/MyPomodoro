@@ -221,8 +221,8 @@ struct HomeView: View {
                             .fill(Color("Purple"))
                     }
             }
-            .disabled(pomodoroModel.seconds == 0)
-            .opacity(pomodoroModel.seconds != 0 ? 0.5 : 0.1)
+            .disabled(pomodoroModel.seconds == 0 && pomodoroModel.minutes == 0 && pomodoroModel.hour == 0)
+            .opacity(pomodoroModel.seconds == 0 && pomodoroModel.minutes == 0 && pomodoroModel.hour == 0 ? 0.1 : 0.5)
             .padding(.top)
         }
         .padding()
